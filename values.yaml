@@ -3,6 +3,9 @@
   tag: latest
 
 replicaCount: 2
+readinessPath: '/'
+livenessPath: '/'
+
 sourcePort: "3000"
 targetPort: "80"
 

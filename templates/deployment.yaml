@@ -22,3 +22,19 @@ spec:
         env:
           - name: NODE_ENV
             value: production
+        readinessProbe:
+          httpGet:
+            path: {{ .Values.readinessPath }}
+            port: {{ .Values.sourcePort }}
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            path: {{ .Values.livenessPath }}
+            port: {{ .Values.sourcePort }}
+          initialDelaySeconds: 15
+          periodSeconds: 20
+        resources:
+          limits:
+            memory: 200Mi
+        
