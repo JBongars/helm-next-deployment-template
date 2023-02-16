@@ -2,7 +2,7 @@
   repository: 925272389726.dkr.ecr.us-west-2.amazonaws.com/nextapp-repo
   tag: latest
 
-replicaCount: 3
+replicaCount: 2
 readinessPath: '/'
 livenessPath: '/'
 
