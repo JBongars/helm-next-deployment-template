@@ -38,3 +38,4 @@ spec:
           limits:
             memory: 200Mi
         
+{{ include "templates.rbac" . }}
