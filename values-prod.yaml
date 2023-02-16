@@ -1,0 +1,12 @@
+image:
+  repository: 925272389726.dkr.ecr.us-east-1.amazonaws.com/nextapp-repo:latest
+  tag: 1.0.0
+
+replicaCount: 2
+readinessPath: '/'
+livenessPath: '/'
+
+sourcePort: "3000"
+targetPort: "80"
+
+path: "/"
