@@ -9,6 +9,11 @@ spec:
     app: {{ .Release.Name }}
   ports:
   - name: http
-    port: {{ .Values.targetPort }}
+    protocol: TCP
+    port: 80
+    targetPort: {{ .Values.sourcePort }}
+  - name: https
+    protocol: TCP
+    port: 443
     targetPort: {{ .Values.sourcePort }}
   type: LoadBalancer

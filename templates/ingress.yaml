@@ -13,6 +13,13 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: {{ .Release.Name }}-service
+            name: ssl-redirect
             port:
               name: http
+      - path: {{ .Values.path }}(/|$)(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: {{ .Release.Name }}-service
+            port:
+              name: https
