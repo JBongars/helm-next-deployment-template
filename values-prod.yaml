@@ -6,6 +6,8 @@ replicaCount: 2
 readinessPath: '/'
 livenessPath: '/'
 
+ca_arn: arn:aws:acm:us-east-1:925272389726:certificate/c8b4bf39-5414-4f17-969a-ddbc36a06294
+
 sourcePort: "3000"
 targetPort: "80"
 
