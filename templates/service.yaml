@@ -2,11 +2,8 @@
 kind: Service
 metadata:
   name: {{ .Release.Name }}-service
-  # Note that the backend talks over HTTP.
   service.beta.kubernetes.io/aws-load-balancer-backend-protocol: http
-  # TODO: Fill in with the ARN of your certificate.
   service.beta.kubernetes.io/aws-load-balancer-ssl-cert: {{ .Values.ca_arn }}
-  # Only run SSL on the port named "https" below.
   service.beta.kubernetes.io/aws-load-balancer-ssl-ports: "https"
   labels:
     app: {{ .Release.Name }}
